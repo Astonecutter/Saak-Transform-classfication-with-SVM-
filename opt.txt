@@ -1,0 +1,12 @@
+------------ Options -------------
+loadSize: 60000
+recStage: 4
+save_path: image
+size: 32
+stride: 2
+test_batch_size: 20
+train_batch_size: 20
+use_SP: True
+visNum: 5
+windsize: 2
+-------------- End ----------------
