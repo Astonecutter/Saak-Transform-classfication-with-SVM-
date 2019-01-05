@@ -59,10 +59,12 @@ if __name__ == '__main__':
     feature = torch.load('./data/feature')
     allfeature=transdata2mat(feature)
     label = torch.load('./data/label')
+    #get the feature's scores
     # F_scores=F_test(classes_n=10,feature=feature,label=label,allnum=60000)
     # F_scores[np.isnan(F_scores)] = 0
     # torch.save(F_scores, './data/F_scores')
     F_scores = list(torch.load('./data/F_scores'))
+    #thrid situation
     max_2000_all_list = map(F_scores.index, heapq.nlargest(2000, F_scores))
     # F_last_stage = F_scores[-32768:]
     # max_2000_laststage_list = map(F_last_stage.index, heapq.nlargest(2000, F_last_stage))
